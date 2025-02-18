@@ -29,7 +29,7 @@ def exec_automacao():
         #Startando Container
         pyautogui.write("make up docker-compose up -d")
         pyautogui.press("enter")
-        time.sleep(5)
+        time.sleep(4)
 
         #Retornando diretório
         pyautogui.write("cd ..")
@@ -44,7 +44,7 @@ def exec_automacao():
         #Startando Docker
         pyautogui.write("docker-compose -f docker-compose-non-dev.yml up")
         pyautogui.press("enter")
-        pyautogui.sleep(10)
+        pyautogui.sleep(6)
 
         #Close CMD
         pyautogui.hotkey("alt", "f4")
@@ -57,7 +57,7 @@ def exec_automacao():
 
 #Criando Janela
 
-janela = tk.Tk()
+janela = tk.Tk("Automação Carteira")
 janela.title("Automação Carteira")
 janela.geometry("200x100")
 
