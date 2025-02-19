@@ -55,16 +55,24 @@ def exec_automacao():
     except Exception as e:
         messagebox.showerror("Erro", f"Falha na automação: {str(e)}")
 
+#Função Sair do Programa
+
+def sair():
+    janela.destroy() #Fechar interface
+
+
 #Criando Janela
 
 janela = tk.Tk("Automação Carteira")
 janela.title("Automação Carteira")
-janela.geometry("200x100")
+janela.geometry("400x200")
 
 #Criando botão para Startar Script
 
-botao = tk.Button(janela, text="Start", command=exec_automacao, height=2, width=20)
-botao.pack(pady=40)
+botao = tk.Button(janela, text="Iniciar", command=exec_automacao, height=2, width=20)
+botao_sair = tk.Button(janela, text="Sair", command=sair, height=2, width=20)
+botao.pack(pady=20)
+botao_sair.pack(pady=10)
 
 #Executando a interface Gráfica
 janela.mainloop()
